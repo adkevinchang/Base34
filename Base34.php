@@ -1,8 +1,6 @@
 <?php
 /**
  * User: kevin
- * Date: 2018/12/13
- * Time: 13:32
  * 根据用户id生成6位唯一邀请码
  * 无须查询数据库，与id可互换，性能计算优
  */
@@ -42,7 +40,7 @@ class Base34
          
      * @param $bytes 目标byte数组 
          
-     * @author Zikie 
+     * @author 
          
      */
     public function getBytes($str)
@@ -124,6 +122,7 @@ class Base34
                {
                    $res[$x] =  $l[$listLen-1];
                    array_splice($l,$listLen-1,1);
+				   $listLen = count($l);
                }
             }
             return $this->tostr($res);
